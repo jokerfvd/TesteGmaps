@@ -4,5 +4,8 @@
     <string name="app_name">TesteGMaps</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="edit_map">Digite um endereço</string>
+    <string name="button_send">Enviar</string>
 
 </resources>

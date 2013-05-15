@@ -1,0 +1,6 @@
+https://developers.google.com/maps/documentation/android/?hl=pt-BR
+
+
+passos
+- Specify settings in the Application Manifest
+	
