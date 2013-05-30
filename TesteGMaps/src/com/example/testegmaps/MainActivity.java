@@ -15,6 +15,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
+import android.app.Activity;
+import android.os.Bundle;
+
+
 public class MainActivity extends Activity {
 	/**
 	 * para funcionar no emulador, o target precisa ser Google API
@@ -26,6 +31,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		
 		final TextView t = (TextView) findViewById(R.id.textView1);
 
 		Handler mHandler = new Handler() {
@@ -45,13 +52,15 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
-
+	//gmaps https://developers.google.com/maps/documentation/android/marker#customize_a_marker
 	public void displayMap(View view) {
 		Intent intent = new Intent(this, MapActivity.class);
 		EditText editText = (EditText) findViewById(R.id.edit_message);
 		String message = editText.getText().toString();
 		intent.putExtra(EXTRA_MAP, message);
 		startActivity(intent);
+		
+		
 	}
 
 }
