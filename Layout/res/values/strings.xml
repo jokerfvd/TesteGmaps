@@ -16,5 +16,7 @@
     <string name="image_bar_logo">Logo do bar</string>
     <string name="button_checkin">Estou neste estabelecimento</string>
     <string name="button_favorite">Botao favorito</string>
+    <string name="button_expandable_more">Mais...</string>
+    <string name="button_expandable_less">Menos</string>
 
 </resources>

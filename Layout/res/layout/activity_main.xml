@@ -1,15 +1,15 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/scroll"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAEAEA" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#dddddd"
         android:orientation="vertical"
         android:padding="5dp"
-        android:textColor="#333333" >
+        android:textColor="#333333" ><!-- 5 de padding + 5 da drop shadow -->
 
         <!-- bar -->
 
@@ -32,7 +32,7 @@
                     android:background="#000000"
                     android:contentDescription="@string/image_bar_welcome_photo"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/tavern" />
+                    android:src="@drawable/photo" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -75,7 +75,7 @@
                             android:layout_height="46dp"
                             android:layout_marginRight="4dp"
                             android:contentDescription="@string/image_bar_logo"
-                            android:src="@drawable/wolf" />
+                            android:src="@drawable/logo" />
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -138,22 +138,44 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:orientation="vertical" >
+                    android:background="@drawable/border_simple"
+                    android:orientation="vertical"
+                    android:paddingTop="5dp" >
 
-                    <TextView
+                    <!--
+                         <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/bar_description"
                         android:textSize="14sp"
                         android:textStyle="bold" />
+                    -->
+
 
                     <!-- texto -->
 
                     <TextView
-                        android:id="@+id/info"
+                        android:id="@+id/description_text"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="100dp"
+                        android:paddingLeft="1dp"
+                        android:paddingRight="1dp"
                         android:text="@string/bar_description_text"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/expandable"
+                        android:layout_width="fill_parent"
+                        android:layout_height="27dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#F7F7F7"
+                        android:gravity="right|center_vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="@string/button_expandable_more"
+                        android:textAlignment="gravity"
+                        android:textColor="#AAAAAA"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -162,7 +184,7 @@
                 <Button
                     android:id="@+id/button1"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="32dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/orange_button_selector"
                     android:paddingLeft="15dp"

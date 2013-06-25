@@ -5,6 +5,7 @@
 
     <item>
         <shape>
+            <corners android:radius="2dp" />
             <padding
                 android:bottom="1dp"
                 android:left="1dp"
@@ -16,6 +17,7 @@
     </item>
     <item>
         <shape>
+            <corners android:radius="2dp" />
             <padding
                 android:bottom="1dp"
                 android:left="1dp"
@@ -27,6 +29,7 @@
     </item>
     <item>
         <shape>
+            <corners android:radius="2dp" />
             <padding
                 android:bottom="1dp"
                 android:left="1dp"
@@ -38,6 +41,7 @@
     </item>
     <item>
         <shape>
+            <corners android:radius="2dp" />
             <padding
                 android:bottom="1dp"
                 android:left="1dp"
@@ -49,6 +53,7 @@
     </item>
     <item>
         <shape>
+            <corners android:radius="2dp" />
             <padding
                 android:bottom="1dp"
                 android:left="1dp"

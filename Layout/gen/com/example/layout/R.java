@@ -27,20 +27,21 @@ public final class R {
         public static final int border_simple=0x7f020000;
         public static final int drop_shadow=0x7f020001;
         public static final int ic_launcher=0x7f020002;
-        public static final int orange_button_pressed=0x7f020003;
-        public static final int orange_button_released=0x7f020004;
-        public static final int orange_button_selector=0x7f020005;
-        public static final int rating_important=0x7f020006;
-        public static final int rating_not_important=0x7f020007;
-        public static final int tavern=0x7f020008;
-        public static final int wolf=0x7f020009;
+        public static final int logo=0x7f020003;
+        public static final int orange_button_pressed=0x7f020004;
+        public static final int orange_button_released=0x7f020005;
+        public static final int orange_button_selector=0x7f020006;
+        public static final int photo=0x7f020007;
+        public static final int rating_important=0x7f020008;
+        public static final int rating_not_important=0x7f020009;
     }
     public static final class id {
-        public static final int action_settings=0x7f090007;
+        public static final int action_settings=0x7f090008;
         public static final int address=0x7f090002;
-        public static final int button1=0x7f090005;
-        public static final int comment=0x7f090006;
-        public static final int info=0x7f090004;
+        public static final int button1=0x7f090006;
+        public static final int comment=0x7f090007;
+        public static final int description_text=0x7f090004;
+        public static final int expandable=0x7f090005;
         public static final int locinfo=0x7f090001;
         public static final int scroll=0x7f090000;
         public static final int timestamp=0x7f090003;
@@ -63,6 +64,8 @@ public final class R {
         public static final int bar_name=0x7f060003;
         public static final int bar_population=0x7f060002;
         public static final int button_checkin=0x7f06000b;
+        public static final int button_expandable_less=0x7f06000e;
+        public static final int button_expandable_more=0x7f06000d;
         public static final int button_favorite=0x7f06000c;
         public static final int image_bar_logo=0x7f06000a;
         public static final int image_bar_welcome_photo=0x7f060009;
