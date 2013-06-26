@@ -11,7 +11,40 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int title_background=0x7f040000;
+        public static final int app_background=0x7f04000d;
+        public static final int app_base_color=0x7f040011;
+        public static final int app_base_color_dark=0x7f040012;
+        public static final int app_base_color_light=0x7f040013;
+        public static final int app_foreground=0x7f04000e;
+        public static final int app_line=0x7f04000f;
+        public static final int app_small_box=0x7f040010;
+        /**  nomes resolvidos 
+         */
+        public static final int app_text_dark=0x7f04000a;
+        public static final int app_text_lightgrey=0x7f04000c;
+        public static final int app_text_white=0x7f04000b;
+        public static final int gray10=0x7f040006;
+        /**  texto 
+         */
+        public static final int gray20=0x7f040005;
+        /**  background 
+         */
+        public static final int gray3=0x7f040008;
+        /**  texto 
+         */
+        public static final int gray30=0x7f040004;
+        /**  linhas 
+         */
+        public static final int gray8=0x7f040007;
+        public static final int gray80=0x7f040003;
+        public static final int orange=0x7f040000;
+        /**  cor base 
+         */
+        public static final int orange_dark=0x7f040001;
+        public static final int orange_light=0x7f040002;
+        /**  caixas destaque 
+         */
+        public static final int white=0x7f040009;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -25,21 +58,26 @@ public final class R {
     }
     public static final class drawable {
         public static final int border_simple=0x7f020000;
-        public static final int drop_shadow=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int logo=0x7f020003;
-        public static final int orange_button_pressed=0x7f020004;
-        public static final int orange_button_released=0x7f020005;
-        public static final int orange_button_selector=0x7f020006;
-        public static final int photo=0x7f020007;
-        public static final int rating_important=0x7f020008;
-        public static final int rating_not_important=0x7f020009;
+        public static final int border_singleside=0x7f020001;
+        public static final int drop_shadow=0x7f020002;
+        public static final int drop_shadow_box=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int logo=0x7f020005;
+        public static final int orange_button_pressed=0x7f020006;
+        public static final int orange_button_released=0x7f020007;
+        public static final int orange_button_selector=0x7f020008;
+        public static final int photo=0x7f020009;
+        public static final int rating_important=0x7f02000a;
+        public static final int rating_not_important=0x7f02000b;
     }
     public static final class id {
-        public static final int action_settings=0x7f090008;
+        public static final int action_settings=0x7f09000b;
         public static final int address=0x7f090002;
         public static final int button1=0x7f090006;
-        public static final int comment=0x7f090007;
+        public static final int comment=0x7f09000a;
+        public static final int comment1=0x7f090008;
+        public static final int comment2=0x7f090009;
+        public static final int comment_section=0x7f090007;
         public static final int description_text=0x7f090004;
         public static final int expandable=0x7f090005;
         public static final int locinfo=0x7f090001;
@@ -58,23 +96,25 @@ public final class R {
         public static final int app_name=0x7f060000;
         public static final int bar_address=0x7f060005;
         public static final int bar_comment=0x7f060008;
-        public static final int bar_description=0x7f060006;
         public static final int bar_description_text=0x7f060007;
+        public static final int bar_header_comments=0x7f060009;
+        public static final int bar_header_description=0x7f060006;
         public static final int bar_last_modified=0x7f060004;
         public static final int bar_name=0x7f060003;
         public static final int bar_population=0x7f060002;
-        public static final int button_checkin=0x7f06000b;
-        public static final int button_expandable_less=0x7f06000e;
-        public static final int button_expandable_more=0x7f06000d;
-        public static final int button_favorite=0x7f06000c;
-        public static final int image_bar_logo=0x7f06000a;
-        public static final int image_bar_welcome_photo=0x7f060009;
+        public static final int button_checkin=0x7f06000c;
+        public static final int button_expandable_less=0x7f06000f;
+        public static final int button_expandable_more=0x7f06000e;
+        public static final int button_favorite=0x7f06000d;
+        public static final int image_bar_logo=0x7f06000b;
+        public static final int image_bar_welcome_photo=0x7f06000a;
     }
     public static final class style {
         public static final int ActionBar=0x7f070001;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
 
     
 
@@ -93,5 +133,17 @@ public final class R {
         /**  Application theme. 
          */
         public static final int AppTheme=0x7f070002;
+        /**  fundo 
+         */
+        public static final int app_background_base=0x7f070005;
+        public static final int app_background_profile=0x7f070006;
+        public static final int app_header_text=0x7f070004;
+        /**  text style 
+         */
+        public static final int app_normal_text=0x7f070003;
+        /**  profile 
+         */
+        public static final int app_profile_box=0x7f070007;
+        public static final int app_profile_textbox=0x7f070008;
     }
 }

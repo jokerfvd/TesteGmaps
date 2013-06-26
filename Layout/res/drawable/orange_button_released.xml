@@ -5,7 +5,7 @@
         <shape android:shape="rectangle" >
             <corners android:radius="3dp" />
 
-            <solid android:color="#FFAC59" />
+            <solid android:color="@color/app_base_color_light" />
 
             <padding android:top="1dp" />
         </shape>
@@ -14,7 +14,7 @@
         <shape android:shape="rectangle" >
             <corners android:radius="3dp" />
 
-            <solid android:color="#BF491C" />
+            <solid android:color="@color/app_base_color_dark" />
 
             <padding android:bottom="1dp" />
         </shape>
@@ -23,7 +23,7 @@
         <shape android:shape="rectangle" >
             <corners android:radius="3dp" />
 
-            <solid android:color="#F15A24" />
+            <solid android:color="@color/app_base_color" />
         </shape>
     </item>
 

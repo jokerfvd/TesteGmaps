@@ -1,22 +1,43 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
-    <style name="AppBaseTheme" parent="android:Theme.Holo">
-        
-    </style>
- 
-    <style name="ActionBar" parent="android:style/Widget.Holo.ActionBar">     
-        <item name="android:background">@color/title_background</item>
+    <style name="AppBaseTheme" parent="android:Theme.Holo"></style>
+
+    <style name="ActionBar" parent="android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@color/app_background</item>
     </style>
 
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <item name="android:actionBarStyle">@style/ActionBar</item>
     </style>
-
+	
+    <!-- text style -->
+    <style name="app_normal_text">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="app_header_text" parent="app_normal_text">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
     
-
+    <!-- fundo -->
+    <style name="app_background_base">
+        <item name="android:background">@color/app_background</item>
+        <item name="android:textColor">@color/app_text_dark</item>
+    </style>
+    <style name="app_background_profile" parent="app_background_base">        
+        <item name="android:padding">5dp</item>
+    </style>
+    <!-- profile -->
+    <style name="app_profile_box">
+        <item name="android:background">@drawable/drop_shadow</item>
+    </style>
+    <style name="app_profile_textbox">
+        <item name="android:padding">10dp</item>
+    </style>
+    
 </resources>

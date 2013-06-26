@@ -1,22 +1,23 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/scroll"
+    style="@style/app_background_profile"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#EAEAEA" >
+    android:layout_height="match_parent" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="5dp"
-        android:textColor="#333333" ><!-- 5 de padding + 5 da drop shadow -->
+        android:orientation="vertical" >
+
+        <!-- 5 de padding + 5 da drop shadow -->
+
 
         <!-- bar -->
 
         <LinearLayout
+            style="@style/app_profile_box"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/drop_shadow"
             android:orientation="vertical" >
 
             <!-- imagem -->
@@ -35,28 +36,27 @@
                     android:src="@drawable/photo" />
 
                 <TextView
+                    style="@style/app_header_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_margin="10dp"
-                    android:alpha="0.7"
-                    android:background="#ffffff"
+                    android:background="@drawable/border_singleside"
                     android:paddingBottom="3dp"
                     android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
+                    android:paddingRight="7dp"
                     android:paddingTop="3dp"
-                    android:text="@string/bar_population"
-                    android:textSize="14sp" />
+                    android:layout_marginTop="10dp"
+                    android:text="@string/bar_population" />
             </RelativeLayout>
 
             <!-- informações com padding -->
 
             <LinearLayout
+                style="@style/app_profile_textbox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:padding="10dp" >
+                android:orientation="vertical" >
 
                 <!-- logo, nome do estabelecimento, data de update e botao favorito -->
 
@@ -87,30 +87,29 @@
 
                             <TextView
                                 android:id="@+id/locinfo"
+                                style="@style/app_header_text"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/bar_name"
-                                android:textSize="16sp"
-                                android:textStyle="bold" />
+                                android:text="@string/bar_name" />
 
                             <!-- endereco -->
 
                             <TextView
                                 android:id="@+id/address"
+                                style="@style/app_normal_text"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/bar_address"
-                                android:textSize="12sp" />
+                                android:text="@string/bar_address" />
 
                             <!-- data de update -->
 
                             <TextView
                                 android:id="@+id/timestamp"
+                                style="@style/app_normal_text"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/bar_last_modified"
-                                android:textColor="#B3B3B3"
-                                android:textSize="12sp" />
+                                android:textColor="#B3B3B3" />
                         </LinearLayout>
 
                         <!-- botao favorito -->
@@ -142,70 +141,92 @@
                     android:orientation="vertical"
                     android:paddingTop="5dp" >
 
-                    <!--
-                         <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/bar_description"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-                    -->
-
-
+                    
                     <!-- texto -->
 
                     <TextView
                         android:id="@+id/description_text"
+                        style="@style/app_normal_text"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:paddingLeft="1dp"
                         android:paddingRight="1dp"
-                        android:text="@string/bar_description_text"
-                        android:textSize="12sp" />
+                        android:text="@string/bar_description_text" />
 
                     <Button
                         android:id="@+id/expandable"
+                        style="@style/app_normal_text"
                         android:layout_width="fill_parent"
                         android:layout_height="27dp"
-                        android:layout_marginBottom="1dp"
                         android:layout_marginTop="5dp"
-                        android:background="#F7F7F7"
+                        android:background="@color/app_small_box"
                         android:gravity="right|center_vertical"
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
                         android:text="@string/button_expandable_more"
                         android:textAlignment="gravity"
-                        android:textColor="#AAAAAA"
-                        android:textSize="12sp" />
+                        android:textColor="@color/app_text_lightgrey" />
                 </LinearLayout>
 
                 <!-- botao laranja -->
 
                 <Button
                     android:id="@+id/button1"
+                    style="@style/app_header_text"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
-                    android:layout_marginBottom="10dp"
                     android:background="@drawable/orange_button_selector"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     android:text="@string/button_checkin"
-                    android:textColor="#ffffff"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/app_text_white" />
+            </LinearLayout>
+        </LinearLayout>
 
-                <LinearLayout
+        <LinearLayout
+            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:paddingLeft="5dp" >
+
+            <TextView
+                android:id="@+id/comment_section"
+                style="@style/app_normal_text"
+                android:textColor="@color/app_text_lightgrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bar_header_comments" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/app_profile_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                style="@style/app_profile_textbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/comment1"
+                    style="@style/app_normal_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:text="@string/bar_comment" />
 
-                    <TextView
-                        android:id="@+id/comment"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/bar_comment"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/comment2"
+                    style="@style/app_normal_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bar_comment" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

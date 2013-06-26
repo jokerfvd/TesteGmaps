@@ -68,7 +68,7 @@
 
     <item>
         <shape android:shape="rectangle" >
-            <solid android:color="@color/app_foreground" />
+            <solid android:color="#FFFFFF" />
         </shape>
     </item>
 
