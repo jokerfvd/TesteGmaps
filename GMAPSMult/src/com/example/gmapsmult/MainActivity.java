@@ -113,50 +113,74 @@ public class MainActivity extends Activity implements
 					RQS_GooglePlayServices);
 		}
 	}
+	
+	/**
+	 * Metodo para adicionar ponto no mapa
+	 * @param lat
+	 * @param log
+	 * @param text
+	 * @param qt
+	 */
+	private void addmark(double lat, double log, String text, int qt) {
+		// Bitmap.Config conf = Bitmap.Config.ARGB_8888;
+		// Bitmap bmp = Bitmap.createBitmap(58, 80, conf);
+		// Canvas canvas1 = new Canvas(bmp);
 
-	private void addmark(double lat,double log,String text, int qt){
-		//Bitmap.Config conf = Bitmap.Config.ARGB_8888;
-		//Bitmap bmp = Bitmap.createBitmap(58, 80, conf);
-		//Canvas canvas1 = new Canvas(bmp);
-		 
 		// paint defines the text color,
 		// stroke width, size
-//		Paint color = new Paint();
-//		color.setTextSize(18);
-//		color.setFakeBoldText(true);
-//		color.setColor(Color.BLACK);
-//		 
-//		//modify canvas
-//		canvas1.drawBitmap(BitmapFactory.decodeResource(getResources(),
-//		        R.drawable.bar_mark), 0,0, color);
-//		canvas1.drawText(String.valueOf(qt), 22, 57, color);
-		 
+		// Paint color = new Paint();
+		// color.setTextSize(18);
+		// color.setFakeBoldText(true);
+		// color.setColor(Color.BLACK);
+		//
+		// //modify canvas
+		// canvas1.drawBitmap(BitmapFactory.decodeResource(getResources(),
+		// R.drawable.bar_mark), 0,0, color);
+		// canvas1.drawText(String.valueOf(qt), 22, 57, color);
+
 		MarkerOptions mark = new MarkerOptions();
-		mark.position(new LatLng(lat,log));
+		mark.position(new LatLng(lat, log));
 		mark.title(text);
-		mark.snippet("pessoas: "+String.valueOf(qt));
+		mark.snippet("pessoas: " + String.valueOf(qt));
 		mark.icon(BitmapDescriptorFactory.fromResource(R.drawable.bar_mark));
 		map.addMarker(mark);
 	}
 
-	private void generateLocations(Location firstloc){
-	   double lat = firstloc.getLatitude();
-	   double log = firstloc.getLongitude();
-	   for(int i = 1; i < 15; i++){
-		   this.addmark(lat+0.001*i, log+0.001*i, "Label "+String.valueOf(i), i);
-	   }   
-   }
+	/**
+	 * metodo para gerar pontos
+	 * 
+	 * @param firstloc
+	 */
+	private void generateDummyLocations(Location firstloc) {
+		//capta pontos latitude e longitude
+		double lat = firstloc.getLatitude();
+		double log = firstloc.getLongitude();
+		
+		//realiza incremento nos pontos e chama a adicao no mapa
+		for (int i = 1; i < 15; i++) {
+			this.addmark(lat + 0.001 * i, log + 0.001 * i,
+					"Label " + String.valueOf(i), i);
+		}
+	}
 
+	/**
+	 * Metodo executando pelo evento de localizacao
+	 */
 	public void onMyLocationChange(Location lastKnownLocation) {
+		// definicao de zoom e localizacao
 		CameraUpdate myLoc = CameraUpdateFactory
 				.newCameraPosition(new CameraPosition.Builder()
 						.target(new LatLng(lastKnownLocation.getLatitude(),
 								lastKnownLocation.getLongitude())).zoom(16)
 						.build());
+		// commita as alteracoes na camera
 		map.moveCamera(myLoc);
 
+		// remove a inscricao no evento de buscar locacao
 		map.setOnMyLocationChangeListener(null);
-		generateLocations(lastKnownLocation);
+
+		// gera pontos para popular o mapa
+		generateDummyLocations(lastKnownLocation);
 
 	}
 
